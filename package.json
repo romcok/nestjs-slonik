@@ -1,0 +1,52 @@
+{
+  "name": "nestjs-slonik",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "readme": "./README.md",
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && cp package.json README.md dist/",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "test": "jest"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^6.6.3",
+    "@nestjs/core": "^6.6.3",
+    "slonik": "^21.4.1"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^6.10.5",
+    "@types/jest": "^24.0.23",
+    "@types/supertest": "^2.0.8",
+    "@types/slonik": "^21.4.0",
+    "jest": "^24.9.0",
+    "npm-install-peers": "^1.2.1",
+    "prettier": "^1.18.2",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.19.0",
+    "typescript": "^3.6.2"
+  },
+  "dependencies": {
+    "cinnamon-backend": "file:../cinnamon-backend"
+  },
+  "author": {
+    "name": "romcok",
+    "email": "bejvas.jod@gmail.com"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "test",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
